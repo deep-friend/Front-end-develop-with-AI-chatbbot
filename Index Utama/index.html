@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3DDOCS - Digital Asset Management for Property & Construction</title>
+    <link rel="stylesheet" href="indexx.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="site-wrapper">
+       <!-- Header -->
+       <header class="main-header">
+         <div class="logo">3DDOCS</div>
+         
+         <!-- Desktop/Tablet Navigation -->
+         <nav class="desktop-nav">
+           <a href="../diskon/diskon.html" class="nav-link">Diskon Asset</a>
+           <a href="../historypembelian/historypembelian.html" class="nav-link">Histori Pembelian</a>
+           <a href="../itemcomponent/itemComponent.html" class="nav-link">Item Component</a>
+           <a href="../pendaftaran/Pendaftaran.html" class="nav-link profile-link">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+               <circle cx="12" cy="7" r="4"/>
+             </svg>
+             Profile
+           </a>
+         </nav>
+
+         <!-- Mobile Navigation Controls -->
+         <nav class="nav-controls">
+           <button
+             class="icon-btn menu-toggle"
+             id="menuToggle"
+             aria-label="Menu"
+           >
+             <svg
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               class="menu-icon"
+             >
+               <line x1="3" y1="12" x2="21" y2="12" />
+               <line x1="3" y1="6" x2="21" y2="6" />
+               <line x1="3" y1="18" x2="21" y2="18" />
+             </svg>
+           </button>
+           <a href="../pendaftaran/Pendaftaran.html"
+             ><button class="icon-btn profile" aria-label="Profile">
+               <svg
+                 width="20"
+                 height="20"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+               >
+                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                 <circle cx="12" cy="7" r="4" />
+               </svg></button
+           ></a>
+         </nav>
+       </header>
+
+      <!-- Menu Overlay -->
+      <div class="menu-overlay" id="menuOverlay"></div>
+
+      <!-- Sidebar Menu -->
+      <nav class="sidebar-menu" id="sidebarMenu">
+        <div class="menu-header">
+          <h3>Menu</h3>
+          <button class="menu-close" id="menuClose" aria-label="Close Menu">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <a href="../diskon/diskon.html" class="menu-link">
+              <div class="menu-icon-wrapper">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <span>Diskon Asset</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                class="arrow-icon"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a
+              href="../historypembelian/historypembelian.html"
+              class="menu-link"
+            >
+              <div class="menu-icon-wrapper">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                  <polyline points="10 9 9 9 8 9" />
+                </svg>
+              </div>
+              <span>Histori Pembelian</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                class="arrow-icon"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="../itemcomponent/itemComponent.html" class="menu-link">
+              <div class="menu-icon-wrapper">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                  <line x1="9" y1="3" x2="9" y2="21" />
+                  <line x1="15" y1="3" x2="15" y2="21" />
+                  <line x1="3" y1="9" x2="21" y2="9" />
+                  <line x1="3" y1="15" x2="21" y2="15" />
+                </svg>
+              </div>
+              <span>Item Component</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                class="arrow-icon"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="../pendaftaran/Pendaftaran.html" class="menu-link">
+              <div class="menu-icon-wrapper">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+              <span>Profile</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                class="arrow-icon"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+          <div class="hero-bg">
+            <img
+              src="../Asset/Background 1.png"
+              alt="3D Isometric Room"
+              class="hero-image"
+            />
+            <div class="overlay"></div>
+          </div>
+          <div class="hero-content">
+            <p class="tagline">
+              Cari, kelola, dan presentasikan aset 3D untuk proyek properti &
+              konstruksi.
+            </p>
+            <div class="search-container">
+              <input
+                type="text"
+                placeholder="Cari aset..."
+                class="search-input"
+              />
+              <button class="search-submit" aria-label="Cari">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="body-section">
+          <div class="assets-container">
+            <svg
+              class="star-deco star-1"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="black"
+            >
+              <path
+                d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"
+              />
+            </svg>
+            <svg
+              class="star-deco star-2"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="black"
+            >
+              <path
+                d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"
+              />
+            </svg>
+            <svg
+              class="star-deco star-3"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="black"
+              style="top: 20%; right: 10%"
+            >
+              <path
+                d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"
+              />
+            </svg>
+            <div class="asset-card card-main">
+              <img src="../Asset/Aset 1.png" alt="Asset" />
+            </div>
+            <div class="asset-card card-side-right">
+              <img src="../Asset/Aset 2.png" alt="Asset" />
+            </div>
+            <div class="asset-card card-side-left">
+              <img src="../Asset/Aset 3.png" alt="Asset" />
+            </div>
+            <div class="asset-card card-bottom">
+              <img src="../Asset/Aset 4.png" alt="Asset" />
+            </div>
+          </div>
+
+          <div class="section-divider">
+            <span class="line"></span>
+            <span class="dot"></span>
+            <span class="line"></span>
+          </div>
+
+          <div class="overview-section">
+            <div class="overview-text">
+              <h2>01 Overview</h2>
+              <p>3D Asset Properti & Arsitektur.</p>
+            </div>
+            <div class="overview-display">
+              <img src="../Asset/Rumah 1.png" alt="Overview Display" />
+              <div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Software Section -->
+        <section class="software-section">
+          <div class="section-header">
+            <h2>02 Use Software Model</h2>
+          </div>
+          <div class="software-grid">
+            <div class="software-card">
+              <div class="sw-icon">
+                <img src="../Asset/Blender.png" alt="Blender" />
+              </div>
+              <h3>Blender 3D</h3>
+            </div>
+            <div class="software-card">
+              <div class="sw-icon">
+                <img src="../Asset/Autocad.png" alt="AutoCAD" />
+              </div>
+              <h3>AutoCAD</h3>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+          <div class="section-header">
+            <h2>03 Fitur Kami</h2>
+          </div>
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </div>
+              <h3>3D Viewer</h3>
+              <p>
+                Lihat desain bangunan secara 3D langsung di browser tanpa
+                install software.
+              </p>
+              <button class="pilih-btn">Pilih</button>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+              </div>
+              <h3>3D Asset Standar</h3>
+              <p>
+                Asset 3D ukuran nyata, siap pakai untuk proyek properti &
+                konstruksi.
+              </p>
+              <button class="pilih-btn">Pilih</button>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"
+                  />
+                  <polyline points="13 2 13 9 20 9" />
+                </svg>
+              </div>
+              <h3>Manajemen Proyek & Versi</h3>
+              <p>Simpan, kelola, dan lacak revisi desain dalam satu proyek.</p>
+              <button class="pilih-btn">Pilih</button>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                  />
+                </svg>
+              </div>
+              <h3>Komentar & Revisi</h3>
+              <p>
+                Klien dan tim dapat memberi komentar langsung pada bagian
+                desain.
+              </p>
+              <button class="pilih-btn">Pilih</button>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+              </div>
+              <h3>Asset Properti Berbasis Proyek</h3>
+              <p>
+                Cari dan gunakan asset sesuai kebutuhan bangunan, bukan asset
+                acak.
+              </p>
+              <button class="pilih-btn">Pilih</button>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+              </div>
+              <h3>Ekspor Workflow Lapangan</h3>
+              <p>
+                Ekspor desain ke Blender, SketchUp, atau AutoCAD untuk tahap
+                lanjutan.
+              </p>
+              <button class="pilih-btn">Pilih</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section
+          class="cta-section"
+          style="
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80')
+              center/cover no-repeat;
+            position: relative;
+          "
+        >
+          <div class="cta-card">
+            <h2>Start designing for <span>||You||</span></h2>
+            <p class="brand-text">3DDOCS</p>
+            <button class="cta-button">Daftar Sekarang</button>
+          </div>
+          <div class="info-block">
+            <p>
+              Posisi - Informasi sentral. Informasi mengubah cara orang, bisnis,
+              dan pemerintahan bekerja serta memikirkan dunia. Mendaftar di
+              3DDOCS adalah solusi canggih untuk meningkatkan produktivitas dan
+              keamanan.
+            </p>
+          </div>
+          <div class="cta-overlay"></div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="main-footer">
+        <div class="footer-top">
+          <div class="footer-logo">3DDOCS</div>
+          <div class="footer-links-grid">
+            <div class="footer-col">
+              <h4>Perusahaan</h4>
+              <a href="#">About Us</a>
+              <a href="#">Career</a>
+              <a href="#">Kontak Kami</a>
+            </div>
+            <div class="footer-col">
+              <h4>Dukungan</h4>
+              <a href="#">Help Center</a>
+              <a href="#">Center</a>
+              <a href="#">Training</a>
+            </div>
+            <div class="footer-col">
+              <h4>Komunitas</h4>
+              <a href="#">3DDOCS Forum</a>
+              <a href="#">SketchUp Blog</a>
+              <a href="#">3DDOCS Pembangunan</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="legal">
+            <a href="#">Privasi</a>
+            <a href="#">Ketentuan</a>
+            <a href="#">Hak Cipta dan Milik</a>
+          </div>
+          <div class="copyright">© 2025 3DDOCS Inc</div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container">
+      <button
+        class="chatbot-toggle"
+        id="chatbotToggle"
+        aria-label="Toggle Chat"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+          />
+        </svg>
+      </button>
+
+      <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+          <div class="chatbot-header-info">
+            <h3>3DDOCS Assistant</h3>
+            <span class="chatbot-status">Online</span>
+          </div>
+          <button
+            class="chatbot-close"
+            id="chatbotClose"
+            aria-label="Close Chat"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="chatbot-messages" id="chatbotMessages">
+          <div class="chatbot-message bot-message">
+            <div class="message-content">
+              <p>
+                Halo! Selamat datang di 3DDOCS. Bagaimana saya bisa membantu
+                Anda hari ini?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chatbot-input-area">
+          <input
+            type="text"
+            id="chatbotInput"
+            class="chatbot-input"
+            placeholder="Ketik pesan Anda..."
+            autocomplete="off"
+          />
+          <button
+            class="chatbot-send"
+            id="chatbotSend"
+            aria-label="Send Message"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

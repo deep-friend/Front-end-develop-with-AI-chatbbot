@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histori Pembelian</title>
+    <link rel="stylesheet" href="historypembelian.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Histori Pembelian</h2>
+    
+    <div class="search-container">
+        <input type="text" id="searchOrder" placeholder="Cari pesanan, produk, atau ID pesanan..." class="search-input">
+    </div>
+    
+    <table id="purchaseTable">
+        <thead>
+            <tr>
+                <th>ID Pesanan</th>
+                <th>Tanggal</th>
+                <th>Produk</th>
+                <th>Total</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#ORD-1001</td>
+                <td>28 Des 2025</td>
+                <td>Smartphone Ultra X</td>
+                <td>Rp 5.200.000</td>
+                <td><span class="status status-proses">Sedang Dikirim</span></td>
+            </tr>
+            <tr>
+                <td>#ORD-0992</td>
+                <td>25 Des 2025</td>
+                <td>Wireless Earbuds</td>
+                <td>Rp 850.000</td>
+                <td><span class="status status-selesai">Selesai</span></td>
+            </tr>
+            <tr>
+                <td>#ORD-0985</td>
+                <td>20 Des 2025</td>
+                <td>Casing HP Silikon</td>
+                <td>Rp 45.000</td>
+                <td><span class="status status-batal">Dibatalkan</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<script src="history.js"></script>
+
+</body>
+</html>
